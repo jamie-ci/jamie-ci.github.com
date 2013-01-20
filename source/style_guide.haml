@@ -1,58 +1,82 @@
-#sidebar
-  %section
-    %h3 Guides
-    %ul
-      %li
-        %a.active{:href => '#'} Style Guide
-      %li
-        %a{:href => '#'} Getting Started
-      %li
-        %a{:href => '#'} Build Configuration
-      %li
-        %a{:href => '#'} Logging
-      %li
-        %a{:href => '#'} Setup
+---
+layout: false
+---
 
-  %section
-    %h3 Contact
-    %ul
-      %li
-        %a{:href => '#'} Twitter
-      %li
-        %a{:href => '#'} IRC
-      %li
-        %a{:href => '#'} GitHub
+!!!
+%html
+  %head
+    %meta{:charset => 'utf-8'}
 
-#content
-  %h1 Heading 1
-  %h2 Heading 2
-  %h3 Heading 3
-  %h4 Heading 4
-  %h5 Heading 5
-  %h6 Heading 6
+    / Always force latest IE rendering engine or request Chrome Frame
+    %meta{:content => 'IE=edge,chrome=1', :'http-equiv' => 'X-UA-Compatible'}
 
-  %p This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita autem voluptatum nihil repudiandae id quaerat quos cupiditate dignissimos nulla quisquam ad similique quia aut. Sint impedit tenetur nemo ipsum ab!
+    %title Jamie CI Style Guide
 
-  %hr
+    = stylesheet_link_tag 'normalize', 'application'
+    = javascript_include_tag  'application'
 
-  %a{:href => '#'} Link
+    %body
+      %header#header
+        .wrap
+          %span#logo Jamie CI
 
-  %p This is an <a href="#">inline link</a> over here.
+      %section#main
+        .wrap
+          #sidebar
+            %section
+              %h3 Guides
+              %ul
+                %li
+                  %a.active{:href => '#'} Style Guide
+                %li
+                  %a{:href => '#'} Getting Started
+                %li
+                  %a{:href => '#'} Build Configuration
+                %li
+                  %a{:href => '#'} Logging
+                %li
+                  %a{:href => '#'} Setup
 
-  %ol
-    %li Item 1
-    %li Item 2
-    %li Item 3
-    %li Item 4
+            %section
+              %h3 Contact
+              %ul
+                %li
+                  %a{:href => '#'} Twitter
+                %li
+                  %a{:href => '#'} IRC
+                %li
+                  %a{:href => '#'} GitHub
 
-  %ul
-    %li Item 1
-    %li Item 2
-    %li Item 3
-    %li Item 4
+          #content
+            %h1 Heading 1
+            %h2 Heading 2
+            %h3 Heading 3
+            %h4 Heading 4
+            %h5 Heading 5
+            %h6 Heading 6
 
-  .foo><
-    - code('ruby') do
-      \ def foo
-      \   puts "hello"
-      \ end
+            %p This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita autem voluptatum nihil repudiandae id quaerat quos cupiditate dignissimos nulla quisquam ad similique quia aut. Sint impedit tenetur nemo ipsum ab!
+
+            %hr
+
+            %a{:href => '#'} Link
+
+            %p This is an <a href="#">inline link</a> over here.
+
+            %ol
+              %li Item 1
+              %li Item 2
+              %li Item 3
+              %li Item 4
+
+            %ul
+              %li Item 1
+              %li Item 2
+              %li Item 3
+              %li Item 4
+
+            .foo><
+              - code('ruby') do
+                \ def foo
+                \   puts "hello"
+                \ end
