@@ -1,0 +1,133 @@
+@import 'colors';
+@import 'compass';
+@import 'compass/css3';
+
+@import 'syntax';
+
+$font-size: 14px;
+$line-height: 1.5;
+
+body {
+  background-color: #eee;
+  background-image: image-url('background.png');
+  background-repeat: repeat;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: $font-size;
+}
+
+h2 {
+  padding: 15px 0 5px 0;
+  border-bottom: 1px dashed $light-gray;
+}
+
+p {
+  color: $gray;
+  line-height: $line-height;
+}
+
+a, a:visited {
+  color: $light-blue;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $dark-blue;
+  }
+}
+
+ol, ul {
+  line-height: $line-height;
+}
+
+ul {
+  list-style-type: square;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px dashed $light-gray;
+}
+
+.wrap {
+  margin: 0 auto;
+  overflow: auto;
+  max-width: 1024px;
+  min-width: 800px;
+}
+
+header#header {
+  @include background-image(linear-gradient($light-blue, $blue));
+  border-bottom: 1px solid $dark-blue;
+  @include box-shadow(0 0 5px $gray);
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+
+  span#logo {
+    color: #eee;
+    font-size: 14px;
+    font-family: Helvetica, cursive;
+    text-shadow: 1px 1px 1px $dark-blue;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+}
+
+#sidebar {
+  float: left;
+  margin: 0 1% 0 0;
+  padding: 1%;
+  width: 17%;
+
+  section {
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    border-bottom: 1px dashed $light-light-gray;
+    color: $light-gray;
+    font-family: Helvetica, cursive;
+    font-weight: 100;
+    padding: 0 0 10px 0;
+  }
+
+  ul {
+    line-height: 2;
+    list-style-type: none;
+//     margin: 0 0 0 5%;
+    padding: 0;
+
+    li {
+      a, a:visited {
+        color: $light-gray;
+        font-family: Helvetica, cursive;
+        font-size: 14px;
+        font-weight: 100;
+        text-decoration: none;
+
+        &:hover, &:active {
+          color: $gray;
+          text-decoration: none;
+        }
+
+        &.active {
+          color: $black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+#content {
+  float: right;
+  margin: 0 0 0 1%;
+  padding: 1%;
+  width: 77%;
+}
+
+#footer {
+  clear: both;
+}
