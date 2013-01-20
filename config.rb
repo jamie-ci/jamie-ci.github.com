@@ -1,4 +1,9 @@
 ###
+# Jamie
+###
+set :base_url, 'jamie-ci.github.com'
+
+###
 # Compass
 ###
 
@@ -28,6 +33,10 @@ end
 #   page "/admin/*"
 # end
 
+# This is a hack to dynamically write out the CNAME. When https://github.com/middleman/middleman/issues/742
+# is resolved, this can be changed to whatever syntax is supported
+# proxy '/CNAME', '/index.html', layout: 'CNAME', directory_indexes: false
+
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"
@@ -55,17 +64,34 @@ activate :deploy do |deploy|
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  # Override the link_to method to automatically add the 'active' class to
+  # our current resource.
+  def link_to(*args, &block)
+    resource_index = block_given? ? 0 : 1
+    options_index  = block_given? ? 1 : 2
 
-set :css_dir, 'stylesheets'
+    args[options_index] ||= {}
 
-set :js_dir, 'javascripts'
+    if args[resource_index].respond_to?(:destination_path)
+      if args[resource_index].destination_path == request.path
+        new_classes = args[options_index][:class].try(:split, ' ') || []
+        new_classes.push('active')
 
-set :images_dir, 'images'
+        args[options_index][:class] = new_classes.join(' ')
+      end
+    end
+
+    super
+  end
+end
+
+set :css_dir, 'assets/stylesheets'
+
+set :js_dir, 'assets/javascripts'
+
+set :images_dir, 'assets/images'
+
 
 # Build-specific configuration
 configure :build do
