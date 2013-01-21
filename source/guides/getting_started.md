@@ -38,3 +38,8 @@ Run the `bundle` command again to install the new vagrant driver:
     $ bundle install
 
 Open up the `.jamie.yml` file created in the root of your repository. See [The .jamie.yml](/guides/the_jamie_yaml/) section for more information and configuration options. You can leave the defaults for now.
+
+Now, it is time to get testing. Use the `--parallel` option to run
+your tests in parallel. Trust us, it's faster!
+
+    $ bundle exec jamie test 
