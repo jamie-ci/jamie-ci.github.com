@@ -15,16 +15,16 @@
     %body
       %header#header
         .wrap
-          %span#logo Jamie CI
+          %span#logo= link_to 'Jamie CI', '/'
 
       %section#main
         .wrap
-          %section#sidebar
-            %h3 Guides
-            %ul
-              - sitemap.resources.select { |resource| resource.destination_path =~ /^guides\/.+/ }.each do |resource|
-                %li
-                  = link_to resource.metadata[:page]['title'], resource
+          #sidebar
+            - sitemap.resources.first.children.select{ |c| c.directory_index? }.each do |child|
+              = partial 'partials/sidebar_section', locals: { page: child }
 
           #content
+            - if data.page.title
+              %h1= data.page.title
+
             = yield

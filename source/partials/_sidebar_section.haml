@@ -1,0 +1,4 @@
+%h3= link_to page.metadata[:page]['title'], page
+%ul
+  - page.children.each do |child|
+    %li= link_to child.metadata[:page]['title'], child
