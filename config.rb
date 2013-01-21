@@ -1,3 +1,5 @@
+require 'core_ext/middleman'
+
 ###
 # Jamie
 ###
