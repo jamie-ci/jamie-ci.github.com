@@ -26,7 +26,7 @@ Development
 
 
 #### Style Guide
-For styling information, visit [localhost:4567/style_guide](http://localhost:4567/style_guide).
+For styling information, visit [jamie-ci.github.com/developers/style_guide/](http://jamie-ci.github.com/developers/style_guide/).
 
 Contributing
 ------------
