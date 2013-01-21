@@ -166,5 +166,19 @@ ul.breadcrumbs {
 }
 
 #footer {
+  border-top: 1px solid $light-light-gray;
+  clear: both;
+  margin: 25px auto;
+  width: 70%;
+
+  p {
+    color: $light-gray;
+    font-size: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+  }
+}
+
+.clear {
   clear: both;
 }
