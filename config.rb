@@ -3,7 +3,7 @@ require 'core_ext/middleman'
 ###
 # Jamie
 ###
-set :base_url, 'jamie-ci.github.com'
+set :base_url, 'docs.jamie-ci.org'
 
 ###
 # Compass
