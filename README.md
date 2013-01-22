@@ -41,8 +41,9 @@ License and Authors
 -------------------
 - Author:: Seth Vargo (sethvargo@gmail.com)
 - Author:: Fletcher Nichol (fnichol@nichol.ca)
+- Author:: Mike Fiedler (miketheman@gmail.com)
 
-Copyright 2012, Seth Vargo, Fletcher Nichol
+Copyright 2012, Seth Vargo, Fletcher Nichol, Mike Fiedler
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
