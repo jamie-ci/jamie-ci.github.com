@@ -37,7 +37,7 @@ end
 
 # This is a hack to dynamically write out the CNAME. When https://github.com/middleman/middleman/issues/742
 # is resolved, this can be changed to whatever syntax is supported
-proxy '/CNAME', '/index.html', layout: 'CNAME', directory_indexes: false
+proxy '/CNAME', '/CNAME.html', layout: false, directory_indexes: false, ignore: true
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
