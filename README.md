@@ -10,7 +10,8 @@ Development
 
         git clone git@github.com:jamie-ci/jamie-ci.github.com.git
 
-2. Run the bundle command to install [middleman](http://middlemanapp.com/) and other dependencies.
+2. Run the bundle command to install [middleman](http://middlemanapp.com/) and
+   other dependencies.
 
 3. Run middleman server
 
@@ -33,14 +34,16 @@ Contributing
 ------------
 Please see the [Contribution Guidelines](https://github.com/jamie-ci/jamie-ci.github.com/blob/source/CONTRIBUTING.md) for more information.
 
-If you're looking for ideas on what to contribute, please see [TODO](https://github.com/jamie-ci/jamie-ci.github.com/blob/source/TODO.md).
+If you're looking for ideas on what to contribute, please see
+[TODO](https://github.com/jamie-ci/jamie-ci.github.com/blob/source/TODO.md).
 
 License and Authors
 -------------------
 - Author:: Seth Vargo (sethvargo@gmail.com)
 - Author:: Fletcher Nichol (fnichol@nichol.ca)
+- Author:: Mike Fiedler (miketheman@gmail.com)
 
-Copyright 2012, Seth Vargo, Fletcher Nichol
+Copyright 2012, Seth Vargo, Fletcher Nichol, Mike Fiedler
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
