@@ -1,4 +1,5 @@
-require 'core_ext/middleman'
+require 'lib/compass'
+require 'lib/sitemap'
 
 ###
 # Jamie
@@ -14,9 +15,12 @@ set :base_url, 'docs.jamie-ci.org'
 # require 'susy'
 
 # Change Compass configuration
-compass_config do |config|
-  config.output_style = :compressed
-end
+# compass_config do |config|
+#   config.output_style = :compressed
+# end
+
+# Slim Configuration
+Slim::Engine.set_default_options pretty: true, disable_escape: true
 
 ###
 # Page options, layouts, aliases and proxies
@@ -34,6 +38,7 @@ end
 # with_layout :admin do
 #   page "/admin/*"
 # end
+page '/sitemap.xml', layout: false
 
 # This is a hack to dynamically write out the CNAME. When https://github.com/middleman/middleman/issues/742
 # is resolved, this can be changed to whatever syntax is supported
@@ -53,6 +58,7 @@ activate :automatic_image_sizes
 
 # Ignore file extensions
 activate :directory_indexes
+set :trailing_slash, false
 
 # Enable syntax highlighting
 activate :syntax
@@ -89,10 +95,9 @@ helpers do
 end
 
 set :css_dir, 'assets/stylesheets'
-
 set :js_dir, 'assets/javascripts'
-
 set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
 
 
 # Build-specific configuration
@@ -105,6 +110,9 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+
+  # Minify html
+  activate :minify_html
 
   # Enable cache buster
   # activate :cache_buster

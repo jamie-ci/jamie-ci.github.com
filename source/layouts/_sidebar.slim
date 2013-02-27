@@ -1,0 +1,6 @@
+#sidebar
+	- sitemap.roots.each do |root|
+		h3= link_to root.data['title'], root
+		ul
+			- root.children.each do |child|
+				li= link_to child.data['title'], child
