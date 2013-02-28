@@ -4,10 +4,14 @@ title: 'Getting Started'
 
 Project Setup
 -------------
-Jamie is distributed as a gem. In your `Gemfile`, add `jamie` as a dependency:
+Jamie is distributed as a gem:
+
+    $ gem install jamie
+
+If you're using bundler, we recommend adding `jamie` as a dependency with a locked version:
 
 ```ruby
-gem 'jamie', '~> x.x.x'   # http://rubygems.org/gems/jamie
+gem 'jamie', '~> x.x.x' # Latest stable version
 ```
 
 and run the `bundle` command to install:

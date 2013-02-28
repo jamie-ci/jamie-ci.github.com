@@ -31,8 +31,22 @@ title: 'Style Guide'
   %li Item 3
   %li Item 4
 
+%hr 
+
+%p Code is auto syntax highlighted:
+- code('text') do
+  \ ```ruby
+  \ def foo
+  \   puts "hello"
+  \ end
+  \ ```
+
+%p will yield:
+
 .foo><
   - code('ruby') do
     \ def foo
     \   puts "hello"
     \ end
+
+%p Commands all start with a <tt>$</tt> to differentiate from code.
