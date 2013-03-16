@@ -1,3 +1,0 @@
----
-title: 'Jamie Runner (jr)'
----

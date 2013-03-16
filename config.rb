@@ -2,7 +2,7 @@ require 'lib/compass'
 require 'lib/sitemap'
 
 ###
-# Jamie
+# Test Kitchen
 ###
 set :base_url, 'docs.jamie-ci.org'
 

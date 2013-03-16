@@ -1,8 +1,8 @@
-Contributing to Jamie CI
-========================
-First of all, thank you! You're awesome for contributing to Jamie Docs.
+Contributing to Kitchen Docs
+============================
+First of all, thank you! You're awesome for contributing to Kitchen Docs.
 
-1. Fork the Jamie Docs repository.
+1. Fork the Kitchen Docs repository.
 2. Create a appropriately-named feature branch. For example, if I were fixing a typo in the "Getting Started" guide, I'd name my branch `fix_getting_started_typo`
 3. Make changes and commit to your local branch.
 4. Push the branch to github and submit a Pull Request.

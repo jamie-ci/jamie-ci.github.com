@@ -1,8 +1,8 @@
-Jamie CI Docs
-=============
-This is the official documentation for Jamie CI.
+Test Kitchen Docs
+=================
+This is the official documentation for Test Kitchen 1.0.
 
-Jamie CI docs are written and deployed using [middleman](http://middlemanapp.com/).
+Test Kitchen docs are written and deployed using [middleman](http://middlemanapp.com/).
 
 Development
 -----------

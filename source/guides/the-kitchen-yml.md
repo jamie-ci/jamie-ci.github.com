@@ -1,5 +1,5 @@
 ---
-title: 'The .jamie.yml'
+title: 'The .kitchen.yml'
 ---
 
 Topics
