@@ -1,0 +1,1 @@
+(function(){var e;e=function(){function t(){}var e;return t.highlight=function(){return e()},e=function(){return $("div.highlight pre span.p-Indicator").each(function(e,t){if(!$(t).prev().hasClass("p-Indicator"))return $(t).prev().addClass("key")})},t}(),this.Syntax=e}).call(this);
